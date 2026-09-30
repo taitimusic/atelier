@@ -3,6 +3,8 @@
 既存の楽器を種に、**物理モデルの音色空間**を動かして自分だけの楽器を創り、演奏し、
 **DAW へ持ち出せる**（WAV / SFZ マルチサンプル / MIDI）ブラウザアプリです。バックエンドなし、データは端末内のみ。
 
+**▶ ブラウザでそのまま試す: https://taitimusic.github.io/atelier/**（Chrome / Edge 推奨）
+
 ## 中心の考え方
 
 > 楽器 ＝ 一貫した音色の**領域** ＋ 演奏との**対応づけ** ＋ **同一音源性**
@@ -41,6 +43,8 @@ pnpm render:browser   # 実際の書き出し経路で全種＋交配のデモ W
 ```
 
 出力先は環境変数 `ATELIER_OUT` で変えられます。
+
+`main` へ push すると GitHub Actions（`.github/workflows/pages.yml`）が検査・ビルドして GitHub Pages へ公開します（`/atelier/` 配下なので `--base=/atelier/` でビルド）。
 
 Chrome / Edge 推奨（Web MIDI）。Firefox でも演奏とデモ WAV 書き出しを確認済み。Safari は未検証です。
 
